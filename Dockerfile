@@ -14,6 +14,7 @@ RUN apt install npm yarn -y
 RUN apt install apt-transport-https ca-certificates curl software-properties-common -y
 RUN apt install git -y
 RUN apt install composer -y
+RUN apt install zip -y
 RUN echo -e "\ndate.timezone = Europe/Bratislava" >> /etc/php/7.4/cli/php.ini
 
 CMD ["/run-services.sh"]
