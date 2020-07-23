@@ -15,6 +15,8 @@ RUN apt install apt-transport-https ca-certificates curl software-properties-com
 RUN apt install git -y
 RUN apt install composer -y
 RUN apt install zip -y
+RUN apt install rsync -y
+RUN apt install sshpass -y
 RUN echo -e "\ndate.timezone = Europe/Bratislava" >> /etc/php/7.4/cli/php.ini
 
 CMD ["/run-services.sh"]
