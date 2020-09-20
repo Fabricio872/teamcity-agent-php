@@ -7,6 +7,7 @@ RUN apt -y install software-properties-common
 RUN add-apt-repository ppa:ondrej/php -y
 RUN apt install php-cli php-xml php-gd php-zip php-mysql php-sqlite3 -y
 RUN apt install php-mbstring php-intl php-curl -y
+RUN apt install php-imagick -y
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt update

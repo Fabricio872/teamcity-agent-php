@@ -13,6 +13,7 @@ Docker container for building php apps with focus on Symfony and Sylius based on
  - php-mbstring
  - php-intl
  - php-curl
+ - php-imagick
  - npm
  - yarn
  - apt-transport-https
