@@ -10,8 +10,12 @@ RUN apt install php-mbstring php-intl php-curl -y
 RUN apt install php-imagick -y
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt install curl dirmngr apt-transport-https lsb-release ca-certificates -y
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt update
-RUN apt install npm yarn -y
+RUN apt install nodejs -y
+RUN apt autoremove
+RUN apt install yarn -y
 RUN apt install apt-transport-https ca-certificates curl software-properties-common -y
 RUN apt install git -y
 RUN apt install composer -y

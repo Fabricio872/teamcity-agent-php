@@ -15,6 +15,7 @@ Docker container for building php apps with focus on Symfony and Sylius based on
  - php-curl
  - php-imagick
  - npm
+ - nodejs
  - yarn
  - apt-transport-https
  - ca-certificates
