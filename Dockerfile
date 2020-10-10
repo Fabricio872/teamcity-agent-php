@@ -26,5 +26,6 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt install nodejs -y
 
 RUN echo -e "\ndate.timezone = Europe/Bratislava" >> /etc/php/7.4/cli/php.ini
+RUN echo -e "Host *\n    StrictHostKeyChecking no" >> /root/.ssh/config
 
 CMD ["/run-services.sh"]
