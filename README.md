@@ -26,6 +26,7 @@ Docker container for building php apps with focus on Symfony and Sylius based on
  - zip
  - rsync
  - sshpass
+ - scss compiler
 
 ## php.ini changes
  - date.timezone = Europe/Bratislava
