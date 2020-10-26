@@ -5,9 +5,9 @@ USER root
 RUN apt update && apt upgrade -y
 RUN apt -y install software-properties-common
 RUN add-apt-repository ppa:ondrej/php -y
-RUN apt install php-cli php-xml php-gd php-zip php-mysql php-sqlite3 -y
-RUN apt install php-mbstring php-intl php-curl -y
-RUN apt install php-imagick -y
+RUN apt install php7.3-cli php7.3-xml php7.3-gd php7.3-zip php7.3-mysql php7.3-sqlite3 -y
+RUN apt install php7.3-mbstring php7.3-intl php7.3-curl -y
+RUN apt install php7.3-imagick -y
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt update
@@ -28,7 +28,7 @@ RUN apt install dirmngr apt-transport-https lsb-release ca-certificates -y
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt install nodejs -y
 
-RUN echo -e "\ndate.timezone = Europe/Bratislava" >> /etc/php/7.4/cli/php.ini
+RUN echo -e "\ndate.timezone = Europe/Bratislava" >> /etc/php/7.3/cli/php.ini
 RUN mkdir /root/.ssh
 RUN echo -e "Host *\n    StrictHostKeyChecking no" >> /root/.ssh/config
 
