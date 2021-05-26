@@ -8,7 +8,6 @@ docker run -d -e SERVER_URL="<server-url:8111>" -e AGENT_NAME="<agent-name>" --r
 ```
 
 ## aditional configs
-- agent.type=docker
-- date.timezone = Europe/Bratislava
+- agent.type=php
 
 > this install same php environment as [Fabricio872/php-dev](https://github.com/Fabricio872/php-dev) installation script
