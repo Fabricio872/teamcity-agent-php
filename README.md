@@ -2,31 +2,13 @@
 
 Docker container for building php apps with focus on Symfony and Sylius based on [jetbrains/teamcity-minimal-agent](https://hub.docker.com/r/jetbrains/teamcity-minimal-agent/) image
 
-## Installed aditional packages
+## Installation
+```bash
+docker run -d -e SERVER_URL="<server-url:8111>" -e AGENT_NAME="<agent-name>" --restart unless-stopped fabrik/teamcity-agent-php
+```
 
- - php-cli
- - php-xml
- - php-gd
- - php-zip
- - php-mysql
- - php-sqlite3
- - php-mbstring
- - php-intl
- - php-curl
- - php-imagick
- - npm
- - nodejs
- - yarn
- - apt-transport-https
- - ca-certificates
- - curl
- - software-properties-common
- - git
- - composer
- - zip
- - rsync
- - sshpass
- - scss compiler
+## aditional configs
+- agent.type=docker
+- date.timezone = Europe/Bratislava
 
-## php.ini changes
- - date.timezone = Europe/Bratislava
+> this install same php environment as [Fabricio872/php-dev](https://github.com/Fabricio872/php-dev) installation script
