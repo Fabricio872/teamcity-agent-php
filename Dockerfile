@@ -9,6 +9,7 @@ RUN apt install sudo -y
 RUN apt install wget -y
 RUN apt install software-properties-common -y
 RUN apt install sshpass -y
+RUN apt install rsync -y
 
 RUN git clone https://github.com/Fabricio872/php-dev
 RUN cd /php-dev && git reset --hard fdcb33d62278644bf62dba4b7952dd47ff2f9ecc
