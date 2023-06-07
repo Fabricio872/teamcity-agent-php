@@ -16,7 +16,7 @@ RUN cd /php-dev && git reset --hard fdcb33d62278644bf62dba4b7952dd47ff2f9ecc
 RUN chmod u+x /php-dev/install.sh && /php-dev/install.sh
 
 RUN mkdir /root/.ssh
-RUN echo "Host *\n    StrictHostKeyChecking no" > /root/.ssh/config -e
+RUN echo "Host *\n    StrictHostKeyChecking no" > /root/.ssh/config
 
 COPY buildAgent.dist.properties /opt/buildagent/conf/buildAgent.dist.properties
 
